@@ -1,42 +1,281 @@
-#root {
-  max-width: 1280px;
+:root {
+  --accent-blue: #0a4d6f;
+  --accent-pink: #ff66cc;
+}
+
+/* =================== Base Layout =================== */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  align-items: center;
+}
+
+/* =================== Hero Section =================== */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 10vh;
+  width: 100%;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-section > * {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: #f9f9f9;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+/* =================== Home Page Centering =================== */
+.home-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-inner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Corrected spacing */
+.home-inner h2 {
+  margin: 1.5rem 0 1rem;
+  color: #fff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+/* =================== Visit Locations =================== */
+.visit-locations {
+  position: relative;
+  min-height: 250px;
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  border-top: 2px solid #ccc;
+  font-family: "Inter", sans-serif;
+}
+
+.visit-locations h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-blue);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+/* Location buttons row */
+.location-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Location tab buttons */
+.loc-btn {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Hover = subtle hint */
+.loc-btn:hover {
+  color: var(--accent-blue);
+}
+
+/* Active (selected) tab */
+.loc-btn.active {
+  color: var(--accent-blue);
+  text-shadow: 0 0 10px rgba(10, 77, 111, 0.6);
+}
+
+/* Center location info neatly below */
+.location-info {
+  margin-top: 1rem;
+  background: #f9f9f9;
+  color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.location-info .tagline {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #444;
+}
+
+/* =================== NavBar =================== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 0;
+  background-color: #242424;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.25s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #66bde9;
+}
+
+/* Active (current route) */
+.nav-link.active {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+/* ============ Final Layout + Visual Fixes ============ */
+
+/* Center everything properly */
+.hero-section,
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-section > *,
+.home-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* NavBar polish */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 0;
+  background-color: #242424;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff; /* white by default */
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.25s ease;
+  padding: 0.25rem 0.75rem;
+}
+
+.nav-link:hover {
+  color: #66bde9;
+}
+
+.nav-link.active {
+  color: var(--accent-blue); /* ocean blue */
+  font-weight: 600;
+}
+
+/* Visit Locations tidy center + fade-in */
+.visit-locations {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.loc-btn {
+  border: none;
+  background: transparent;
+  color: #ffffff; /* white default */
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.loc-btn:hover {
+  color: var(--accent-blue);
+}
+
+.loc-btn.active {
+  color: var(--accent-blue); /* blue when selected */
+}
+
+/* Smooth fade for location info */
+.location-info {
+  margin-top: 1rem;
+  background: #f9f9f9;
+  color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
