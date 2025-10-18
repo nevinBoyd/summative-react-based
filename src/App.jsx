@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import HomePage from "./pages/HomePage"; // import your HomePage component
 
 function App() {
   return (
@@ -9,9 +10,9 @@ function App() {
         <h1>Welcome to Get Baked</h1>
         <p>Serving savory and sweet pies, cookies, and coffee.</p>
 
-        {/* Placeholder routes - will add components later */}
+        {/* Main routes */}
         <Routes>
-          <Route path="/" element={<p>Home Page</p>} />
+          <Route path="/" element={<HomePage />} /> 
           <Route path="/menu" element={<p>Menu Page</p>} />
           <Route path="/admin" element={<p>Admin Page</p>} />
           <Route path="/about" element={<p>About Page</p>} />
