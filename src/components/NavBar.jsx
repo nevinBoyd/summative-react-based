@@ -2,24 +2,18 @@ import { NavLink } from "react-router-dom";
 
 // simple navigation bar component
 function NavBar() {
-  const linkStyle = {
-    margin: "0 1rem",
-    textDecoration: "none",
-    color: "black",
-  };
-
   return (
-    <nav style={{ marginBottom: "2rem" }}>
-      <NavLink to="/" style={linkStyle}>
+    <nav className="navbar">
+      <NavLink to="/" className="nav-link">
         Home
       </NavLink>
-      <NavLink to="/menu" style={linkStyle}>
+      <NavLink to="/menu" className="nav-link">
         Menu
       </NavLink>
-      <NavLink to="/admin" style={linkStyle}>
+      <NavLink to="/admin" className="nav-link">
         Admin
       </NavLink>
-      <NavLink to="/about" style={linkStyle}>
+      <NavLink to="/about" className="nav-link">
         About
       </NavLink>
     </nav>
