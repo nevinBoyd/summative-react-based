@@ -9,7 +9,7 @@ This project demonstrates React fundamentals, routing, CRUD operations, and modu
 ---
 
 ## Folder Structure
-
+```
 summative-react-based/
 ├── db.json
 ├── package.json
@@ -33,7 +33,7 @@ summative-react-based/
 ├── MenuPage.jsx
 ├── AdminPage.jsx
 └── AboutPage.jsx
-
+```
 
 ---
 
