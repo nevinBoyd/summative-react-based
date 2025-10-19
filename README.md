@@ -117,8 +117,8 @@ npm run dev
 - [React Router v7 Documentation](https://reactrouter.com)  
 - [Vite Official Docs](https://vitejs.dev)  
 - [MDN Web Docs](https://developer.mozilla.org)  
-- [Flatiron React Curriculum]  
 - [JSON Server GitHub Repo](https://github.com/typicode/json-server)  
+- [Flatiron React Curriculum]  
 
 ---
 
