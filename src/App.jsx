@@ -1,3 +1,4 @@
+import "./App.css"; // <<< IMPORTANT: loads all your styles
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage"; // main landing content with store info and locations
@@ -9,10 +10,7 @@ function App() {
     <div className="App">
       <NavBar />
 
-      {/* 
-        The .hero-section is positioned just below the browser edge, 
-        horizontally and vertically centered for balanced landing aesthetics.
-      */}
+      {/* The hero-section sits just under the navbar and centers the landing content */}
       <main className="hero-section">
         <h1>Welcome to Get Baked</h1>
         <p>Serving Savory and Sweet Pies, Cookies, and Coffee.</p>
