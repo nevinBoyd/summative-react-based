@@ -8,63 +8,62 @@
       "tagline": "Just Dial 2 for a While"
     }
   ],
-
   "products": [
     {
       "id": 1,
       "name": "360 Soul",
       "displayName": "Chicken Pot Pie",
       "type": "Savory",
-      "price": 13.0
+      "price": 13
     },
     {
       "id": 2,
       "name": "Fahrvergnügen",
       "displayName": "S'mores Pie",
       "type": "Dessert",
-      "price": 8.0
+      "price": 8
     },
     {
       "id": 3,
       "name": "XSJADO ~ Shadow",
       "displayName": "Banana Crème Pie",
       "type": "Dessert",
-      "price": 8.0
+      "price": 8
     },
     {
       "id": 4,
       "name": "Baumstimler",
       "displayName": "BBQ Brisket Pie",
       "type": "Savory",
-      "price": 13.0
+      "price": 13
     },
     {
       "id": 5,
       "name": "Gillan & Latimer",
       "displayName": "Mac & Cheese Pie",
       "type": "Savory",
-      "price": 10.0
+      "price": 10
     },
     {
       "id": 6,
       "name": "True Kind",
       "displayName": "Apple Pie",
       "type": "Dessert",
-      "price": 8.0
+      "price": 8
     },
     {
       "id": 7,
       "name": "Sketch Turner",
       "displayName": "Chocolate Chip Cookie",
       "type": "Dessert",
-      "price": 5.0
+      "price": 5
     },
     {
       "id": 8,
       "name": "Luna Grind",
       "displayName": "Snickerdoodle Cookie",
       "type": "Dessert",
-      "price": 5.0
+      "price": 5
     },
     {
       "id": 9,
@@ -85,14 +84,26 @@
       "name": "Session Blend",
       "displayName": "Regular Coffee",
       "type": "Coffee",
-      "price": 3.0
+      "price": 3
     },
     {
       "id": 12,
       "name": "Stay Hydrated",
       "displayName": "Free Water (in-store)",
       "type": "Complimentary",
-      "price": 0.0
+      "price": 0
+    },
+    {
+      "id": "07d0",
+      "name": "Pumpkin ",
+      "type": "pie",
+      "price": 0.01
+    },
+    {
+      "id": "9e7a",
+      "name": "wolf",
+      "type": "pie",
+      "price": 0.27
     }
   ]
 }
