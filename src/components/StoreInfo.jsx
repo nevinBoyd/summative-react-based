@@ -63,22 +63,13 @@ function StoreInfo() {
 
             {/* Contact info with tagline */}
             <p style={{ fontSize: "1.1rem", marginTop: "1rem" }}>
-              <span role="img" aria-label="phone">
-                📞
-              </span>{" "}
-              {store.phone_number}
-              {store.tagline && (
-                <span
-                  style={{
-                    marginLeft: "12px",
-                    fontStyle: "italic",
-                    color: "#ff66cc",
-                  }}
-                >
-                  {store.tagline}
-                </span>
-              )}
-            </p>
+  <span role="img" aria-label="phone">📞</span> {store.phone_number}
+  {store.tagline && (
+    <span className="store-phone">
+      {store.tagline}
+    </span>
+  )}
+</p>
 
             {/* Inline animation style (adds fade-in for tagline) */}
             <style>
