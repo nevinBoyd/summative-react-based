@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage"; // main landing content with store info and locations
 import MenuPage from "./pages/MenuPage"; // menu and CRUD area
+import AdminPage from "./pages/AdminPage";
+import AboutPage from "./pages/AboutPage"
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/menu" element={<MenuPage />} />
-          <Route path="/admin" element={<p>Admin Page</p>} />
-          <Route path="/about" element={<p>About Page</p>} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </main>
     </div>

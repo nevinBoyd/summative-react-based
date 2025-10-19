@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-// simple form to add a new product
-function AddProductForm() {
+function AddProductForm({ onAddProduct }) {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [price, setPrice] = useState("");
@@ -22,9 +21,8 @@ function AddProductForm() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("Added product:", data);
-        // basic feedback
         alert(`${data.name} added to menu!`);
+        onAddProduct(data); // ✅ update parent state
         setName("");
         setType("");
         setPrice("");
