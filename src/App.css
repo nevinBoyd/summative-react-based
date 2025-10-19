@@ -3,8 +3,10 @@
   --accent-pink: #ff66cc;
 }
 
-/* =================== Base Layout =================== */
-html, body, #root {
+/*  Base Layout  */
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
 }
@@ -17,7 +19,7 @@ html, body, #root {
   align-items: center;
 }
 
-/* =================== Hero Section =================== */
+/*  Hero Section  */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -47,7 +49,7 @@ html, body, #root {
   margin-bottom: 1rem;
 }
 
-/* =================== Home Page Centering =================== */
+/*  Home Page Centering  */
 .home-wrapper {
   width: 100%;
   display: flex;
@@ -61,13 +63,12 @@ html, body, #root {
   text-align: center;
 }
 
-/* Corrected spacing */
 .home-inner h2 {
   margin: 1.5rem 0 1rem;
   color: #fff;
 }
 
-/* =================== Visit Locations =================== */
+/*  Visit Locations  */
 .visit-locations {
   position: relative;
   min-height: 250px;
@@ -115,12 +116,10 @@ html, body, #root {
   transition: all 0.25s ease-in-out;
 }
 
-/* Hover = subtle hint */
 .loc-btn:hover {
   color: var(--accent-blue);
 }
 
-/* Active (selected) tab */
 .loc-btn.active {
   color: var(--accent-blue);
   text-shadow: 0 0 10px rgba(10, 77, 111, 0.6);
@@ -145,12 +144,14 @@ html, body, #root {
   color: #444;
 }
 
-/* =================== NavBar =================== */
+/* =================== NavBar (locked alignment version) =================== */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* spans links across the row */
   align-items: center;
-  gap: 3rem;
+  width: 100%;
+  max-width: 900px;               /* same width as hero */
+  margin: 0 auto;                 /* centers the bar */
   padding: 1rem 0;
   background-color: #242424;
   position: sticky;
@@ -159,123 +160,82 @@ html, body, #root {
 }
 
 .nav-link {
-  text-decoration: none;
   color: #ffffff;
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  transition: color 0.25s ease;
-}
-
-/* Hover effect */
-.nav-link:hover {
-  color: #66bde9;
-}
-
-/* Active (current route) */
-.nav-link.active {
-  color: var(--accent-blue);
-  font-weight: 600;
-}
-
-/* ============ Final Layout + Visual Fixes ============ */
-
-/* Center everything properly */
-.hero-section,
-.home-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.hero-section > *,
-.home-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* NavBar polish */
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  padding: 1rem 0;
-  background-color: #242424;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.nav-link {
   text-decoration: none;
-  color: #ffffff; /* white by default */
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
+  padding: 0.25rem 0.75rem;       /* clickable area */
   transition: color 0.25s ease;
-  padding: 0.25rem 0.75rem;
 }
 
 .nav-link:hover {
-  color: #66bde9;
+  color: #66bde9;                 /* hover blue */
 }
 
 .nav-link.active {
-  color: var(--accent-blue); /* ocean blue */
+  color: var(--accent-blue);      /* ocean blue when selected */
   font-weight: 600;
 }
 
-/* Visit Locations tidy center + fade-in */
-.visit-locations {
-  text-align: center;
-  margin: 2rem auto;
-  padding: 1rem;
-  width: 100%;
-  max-width: 700px;
-}
 
-.loc-btn {
-  border: none;
-  background: transparent;
-  color: #ffffff; /* white default */
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  transition: color 0.3s ease;
-}
-
-.loc-btn:hover {
-  color: var(--accent-blue);
-}
-
-.loc-btn.active {
-  color: var(--accent-blue); /* blue when selected */
-}
-
-/* Smooth fade for location info */
-.location-info {
-  margin-top: 1rem;
-  background: #f9f9f9;
-  color: #000;
-  padding: 1rem;
-  border-radius: 10px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0;
-  animation: fadeIn 0.4s forwards;
-}
-
+/* Animations & Polishing  */
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
+}
+
+/* Global dark background */
+body {
+  background-color: #1e1e1e; /* rich dark grey */
+  color: #ffffff;
+}
+
+/* "Visit Our Spots" heading */
+.visit-locations h2 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Remove white box behind location info */
+.location-info {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Text for address and tagline */
+.location-info h3 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.location-info p {
+  color: #ffffff;
+  margin: 0.25rem 0;
+}
+
+/* Tagline italics slightly softened */
+.location-info .tagline {
+  font-style: italic;
+  color: #cccccc;
+  margin-top: 0.4rem;
+}
+
+/* Phone number tagline below number */
+.store-phone {
+  display: block;
+  font-size: 1rem;
+  color: var(--accent-pink);
+  margin-top: 0.5rem;
+  margin-left: 24rem; 
+  text-align: left;
 }
